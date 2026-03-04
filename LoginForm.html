@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body class="Body-Form">
+    <div class="LgnForm">
+      <h2 class="Form-Title">Employee Portal</h2>
+
+      <label for="email">Username</label>
+      <input type="text" id="email" placeholder="Enter your Username" />
+
+      <label for="password">Password</label>
+      <input type="text" id="password" placeholder="Enter your password" />
+      <a href="Employee.html">
+      <button class="Login-Button">Sign in</button>
+      </a>
+    </div>
+
+    <script>
+      const passwordInput = document.getElementById("password");
+
+      let realPassword = "";
+
+      passwordInput.addEventListener("input", function (e) {
+        let value = e.target.value;
+        let lastChar = value[value.length - 1];
+
+        if (value.length > realPassword.length) {
+          realPassword += lastChar;
+        } else {
+          realPassword = realPassword.slice(0, value.length);
+        }
+
+        // Show last letter briefly
+        setTimeout(() => {
+          passwordInput.value = "•".repeat(realPassword.length);
+        }, 500);
+      });
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

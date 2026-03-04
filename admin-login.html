@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DemoSystem Admin Login</title>
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="login-box">
+        <h1 class="logo">DemoSystem</h1>
+        <h2 class="title">Admin Portal</h2>
+
+        <form>
+          <label for="admin-email">Username</label>
+          <input type="username" id="admin-email" placeholder="Enter Username" />
+
+          <label for="admin-password">Password</label>
+          <input type="text" id="admin-password" placeholder="Enter password" />
+
+          <button type="submit" onclick="signIn()">Sign In</button>
+        </form>
+
+        <p class="security-note">Authorized personnel only.</p>
+      </div>
+    </div>
+
+    <script>
+      let realPassword = "";
+      const passwordInput = document.getElementById("admin-password");
+
+      passwordInput.addEventListener("input", function (e) {
+        const value = e.target.value;
+
+        if (value.length > realPassword.length) {
+          // Added character
+          realPassword += value[value.length - 1];
+        } else {
+          // Deleted character
+          realPassword = realPassword.slice(0, value.length);
+        }
+
+        // Show last character briefly
+        const lastChar = realPassword[realPassword.length - 1] || "";
+
+        passwordInput.value = "•".repeat(realPassword.length - 1) + lastChar;
+
+        setTimeout(() => {
+          passwordInput.value = "•".repeat(realPassword.length);
+        }, 500);
+      });
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

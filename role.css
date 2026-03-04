@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+}
+
+/* Main Card */
+.card {
+    background: white;
+    padding: 50px;
+    border-radius: 20px;
+    text-align: center;
+    width: 400px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+}
+
+.logo {
+    font-size: 32px;
+    color: #111827;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #6b7280;
+    margin-bottom: 40px;
+}
+
+/* Buttons Container */
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Base Button Style */
+.btn {
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s;
+    display: block;
+}
+
+/* Admin Button */
+.admin {
+    background: #111827;
+    color: white;
+}
+
+.admin:hover {
+    background: #2563eb;
+    transform: translateY(-3px);
+}
+
+/* Employee Button */
+.employee {
+    background: #e5e7eb;
+    color: #111827;
+}
+
+.employee:hover {
+    background: #2563eb;
+    color: white;
+    transform: translateY(-3px);
+}

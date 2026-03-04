@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+}
+
+.button-container {
+    display: flex;
+    gap: 30px;
+}
+
+/* Base Button Style */
+.btn {
+    padding: 18px 30px;
+    border: none;
+    border-radius: 14px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+    color: white;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Password Button */
+.password {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+}
+
+.password:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(37, 99, 235, 0.6);
+}
+
+/* MFA Button */
+.mfa {
+    background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.mfa:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(16, 185, 129, 0.6);
+}
+
+/* RBAC Button */
+.rbac {
+    background: linear-gradient(135deg, #7c3aed, #6d28d9);
+}
+
+.rbac:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(124, 58, 237, 0.6);
+}
