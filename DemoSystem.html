@@ -15,7 +15,8 @@
         <li>Projects</li>
         <li>Reports</li>
         <li>Settings</li>
-        <li>Logout</li>
+        <li id="logoutBtn">Logout</li>
+        
       </ul>
     </div>
 
@@ -83,5 +84,11 @@
         </table>
       </div>
     </div>
+
+    <script>
+      document.getElementById('logoutBtn').addEventListener('click', function(){
+        window.location.href = 'admin-login.html'
+      })
+    </script>
   </body>
 </html>
